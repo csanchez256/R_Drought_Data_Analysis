@@ -40,3 +40,9 @@ view(latino)
 NM_latino <- filter(drought2020, R_st_name == "New Mexico", race == 2 )
 view(NM_latino)
 
+# Now summary statistics
+# Note: CMPS code Q131r8 means congress should support a bold national climate policy
+drought2020 %>%
+  group_by(race) %>%
+  summarize(mean(Q131r8))
+
