@@ -26,6 +26,7 @@ view(drought2020)
 # note the variables are columns, the observations are rows
 glimpse(drought2020)
 
-HouseholdInc <- filter(drought2020, R_st_name, MedianHHInc < 30000)
+#HouseholdInc <- filter(drought2020, R_st_name, MedianHHInc < 30000)
 NM_State <- filter(drought2020, R_st_name == "New Mexico")
 
+view(NM_State)
