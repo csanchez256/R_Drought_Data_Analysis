@@ -46,3 +46,18 @@ drought2020 %>%
   group_by(race) %>%
   summarize(mean(Q131r8))
 
+# Adding visualizations
+# gplot() is used to construct the initial plot object and is followed by '+' signs to add components
+# One pattern used to invoke ggplot() is as follows:
+# ggplot(data = df, mapping = aes(x,y, other aesthetics))
+# Where df means dataframe. Since we loaded our data in a vector, we'll just use 'drought2020'
+
+
+# ggplot(drought2020, mapping = aes(x = drought ,y = MedianHHInc, color = class )) +
+#   geom_point() +
+#   scale_color_brewer(palette = "Dark2")
+
+# Linear Regression 
+ggplot(drought2020, mapping = aes(x = drought , y = MedianHHInc)) +
+  geom_point() +
+  geom_smooth(method = "lm")
